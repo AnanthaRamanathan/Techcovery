@@ -1993,3 +1993,38 @@
 2021-04-28 12:26:47 PM INFO:127.0.0.1 - - [28/Apr/2021 12:26:47] "[37mGET /signupMail/2%2CME%2CIIT%20kanpur%2CECE HTTP/1.1[0m" 200 -
 2021-04-28 12:26:54 PM INFO:127.0.0.1 - - [28/Apr/2021 12:26:54] "[37mGET /emailDecline HTTP/1.1[0m" 200 -
 2021-04-28 12:27:00 PM INFO:127.0.0.1 - - [28/Apr/2021 12:27:00] "[37mGET /emailDecline HTTP/1.1[0m" 200 -
+2021-04-28 13:26:55 PM INFO: * Restarting with stat
+2021-04-28 13:26:56 PM WARNING: * Debugger is active!
+2021-04-28 13:26:56 PM INFO: * Debugger PIN: 265-138-748
+2021-04-28 13:26:56 PM INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-04-28 13:27:09 PM INFO: * Restarting with stat
+2021-04-28 13:27:09 PM WARNING: * Debugger is active!
+2021-04-28 13:27:09 PM INFO: * Debugger PIN: 265-138-748
+2021-04-28 13:27:09 PM INFO: * Running on http://localhost:5001/ (Press CTRL+C to quit)
+2021-04-28 13:27:36 PM INFO: * Restarting with stat
+2021-04-28 13:27:37 PM WARNING: * Debugger is active!
+2021-04-28 13:27:37 PM INFO: * Debugger PIN: 265-138-748
+2021-04-28 13:27:37 PM INFO: * Running on http://localhost:5003/ (Press CTRL+C to quit)
+2021-04-28 13:27:57 PM INFO: * Restarting with stat
+2021-04-28 13:27:58 PM WARNING: * Debugger is active!
+2021-04-28 13:27:58 PM INFO: * Debugger PIN: 265-138-748
+2021-04-28 13:27:58 PM INFO: * Running on http://localhost:5005/ (Press CTRL+C to quit)
+2021-04-28 13:28:35 PM INFO:127.0.0.1 - - [28/Apr/2021 13:28:35] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-28 13:29:10 PM INFO:Create function start at 1619596750.1859324s
+2021-04-28 13:29:10 PM INFO:Create function end at 1619596750.2219002s
+2021-04-28 13:29:10 PM INFO:Create function take 0.03596782684326172s
+2021-04-28 13:29:10 PM INFO:127.0.0.1 - - [28/Apr/2021 13:29:10] "[32mPOST /create_user/%3Cname%3E,%3CYour_desired_start_up%3E,%3Cmy_email%3E,%3Cretype_email%3E,%3Cpassword%3E,%3Ceducation%3E,%3Cfrom_%3E,%3Cin_%3E,%3CMy_Expected_compensation%3E,%3CYour_Linkedin_Profile%3E,%3CIm_a%3E,%3CMy_expertise_lies_in%3E,%3CMy_Core_competencies%3E,%3CMy_Work_Experience%3E,%3CMy_Mobile_number%3E,%3CMy_Current_Employer%3E,%3CIm_available_in%3E HTTP/1.1[0m" 302 -
+2021-04-28 13:29:12 PM INFO:127.0.0.1 - - [28/Apr/2021 13:29:12] "[37mGET /signupMail/1%2CBE%2CITT%20Delhi%2CECE HTTP/1.1[0m" 200 -
+2021-04-28 13:29:46 PM INFO:127.0.0.1 - - [28/Apr/2021 13:29:46] "[37mGET /emailDecline HTTP/1.1[0m" 200 -
+2021-04-28 13:29:52 PM INFO:127.0.0.1 - - [28/Apr/2021 13:29:52] "[37mGET /emailDecline HTTP/1.1[0m" 200 -
+2021-04-28 13:30:07 PM INFO:127.0.0.1 - - [28/Apr/2021 13:30:07] "[37mGET /signupMail/1%2CBE%2CITT%20Delhi%2CECE HTTP/1.1[0m" 200 -
+2021-04-28 13:39:08 PM INFO:127.0.0.1 - - [28/Apr/2021 13:39:08] "[37mGET /emailDecline HTTP/1.1[0m" 200 -
+2021-04-28 13:39:21 PM INFO:127.0.0.1 - - [28/Apr/2021 13:39:21] "[37mGET /emailDecline HTTP/1.1[0m" 200 -
+2021-04-28 13:39:28 PM INFO:127.0.0.1 - - [28/Apr/2021 13:39:28] "[37mGET /emailDecline HTTP/1.1[0m" 200 -
+2021-04-28 13:47:21 PM INFO:Create function start at 1619597841.9049578s
+2021-04-28 13:47:21 PM INFO:Create function end at 1619597841.935967s
+2021-04-28 13:47:21 PM INFO:Create function take 0.031009197235107422s
+2021-04-28 13:47:21 PM INFO:127.0.0.1 - - [28/Apr/2021 13:47:21] "[32mPOST /create_user/%3Cname%3E,%3CYour_desired_start_up%3E,%3Cmy_email%3E,%3Cretype_email%3E,%3Cpassword%3E,%3Ceducation%3E,%3Cfrom_%3E,%3Cin_%3E,%3CMy_Expected_compensation%3E,%3CYour_Linkedin_Profile%3E,%3CIm_a%3E,%3CMy_expertise_lies_in%3E,%3CMy_Core_competencies%3E,%3CMy_Work_Experience%3E,%3CMy_Mobile_number%3E,%3CMy_Current_Employer%3E,%3CIm_available_in%3E HTTP/1.1[0m" 302 -
+2021-04-28 13:47:24 PM INFO:127.0.0.1 - - [28/Apr/2021 13:47:24] "[37mGET /signupMail/1%2CBE%2CITT%20Delhi%2CECE HTTP/1.1[0m" 200 -
+2021-04-28 13:47:31 PM INFO:127.0.0.1 - - [28/Apr/2021 13:47:31] "[37mGET /emailAccept HTTP/1.1[0m" 200 -
+2021-04-28 13:47:33 PM INFO:127.0.0.1 - - [28/Apr/2021 13:47:33] "[37mGET /emailDecline HTTP/1.1[0m" 200 -
