@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../static/css/recruterSignUp.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 >Welcome to Deligo</h1>
+            <p >Deligo is a WooCommerce Mobile Web App offers deep and seamless integration with WooCommerce.</p>
+            <br>
+            <form action="http://localhost:5010/recruterSignUpDetails/<CompanyName>,<ContactPerson>,<OfficialEmailID>,<Password>,<SlackID>,<ContactNumber>" method="POST">
+                
+                <div class="subContainer">
+                    <div > 
+                        <label>Company Name</label>
+                        <br>
+                        <input class="CompanyName" 
+                            type="text" 
+                            placeholder="Enter Company Name" 
+                            name="CompanyName" 
+                        >
+                        <br>
+    
+                        <label>Contact Person</label>
+                        <br>
+                        <input 
+                            class="ContactPerson"
+                            type="text" 
+                            placeholder="Enter Contact Person" 
+                            name="ContactPerson" 
+                        >
+                        <br>
+    
+                        <label>Official Email ID</label>
+                        <br>
+                        <input 
+                            id="OfficialEmail"
+                            class="OfficialEmailID" 
+                            type="text" 
+                            placeholder="Enter Official Email ID" 
+                            name="OfficialEmailID"
+                        >
+                        <br>
+                        <input type="checkbox"  onclick="emailSlackChatbox()">
+                        <label for="vehicle1">Click here, If my official ID is same as slack ID</label>
+                        <br>
+                    </div>
+    
+                    <div>
+                        <label>Password</label>
+                        <br>
+                        <input 
+                            class="Password"  
+                            type="password" 
+                            placeholder="Enter Password" 
+                            name="Password"
+                        >
+                        <br>
+    
+                        <label>Slack ID</label>
+                        <br>
+                        <input 
+                            id="SlackId"
+                            class="SlackID" 
+                            type="text" 
+                            placeholder="Enter Slack ID" 
+                            name="SlackID"
+                        >
+                        <br>
+    
+                        <label>Contact Number</label>
+                        <br>
+                        <input 
+                            class="ContactNumber"  
+                            type="text" 
+                            placeholder="Enter Contact Number" 
+                            name="ContactNumber" 
+                        >
+                        <br>
+                    </div>
+                </div>
+
+                <div class="buttonDiv">
+                    <button 
+                        type="submit"
+                        class="button"
+                        value="submit">
+                        Submit
+                    </button>
+                </div>
+                
+                
+                
+
+            </form>
+        </div>
+
+    </body>
+    <script>
+        function emailSlackChatbox(){
+
+            var email = document.getElementById("OfficialEmail").value
+            document.getElementById("SlackId").value = email;
+            
+        }
+    </script>
+</html>

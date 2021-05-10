@@ -1,0 +1,96 @@
+body{
+    margin  :   2%;
+}
+
+.container {
+    
+    background-color    :   #f1f1f1;
+    padding-left        :   2%;
+    padding-top         :   1%;
+    padding-right       :   2%;
+    padding-bottom      :   2%;
+    box-shadow  :   5px 10px 18px #888888;
+}
+
+
+
+aside {
+  display: block;
+  position: relative;
+  margin: 40px 0;
+}
+
+
+
+/* Class name via Modernizr */
+.csstransforms aside {
+  border-left: 34px solid rgb(215, 218, 221);
+  padding-left: 10px;
+}
+.csstransforms aside h3 {
+  /* Abs positioning makes it not take up vert space */
+  position: absolute;
+  top: 0;
+  left: -3px;
+  right: 0;
+
+  /* Border is the new background */
+  background: none;
+
+  /* Rotate from top left corner (not default) */
+  transform-origin: 0 0;
+  transform: rotate(90deg);
+}
+
+
+
+.subContainerRow {
+    display: flex;
+    height: 95px;
+    padding-left: 10px;
+}
+
+.subContainerRow2 {
+    display: flex;
+    padding-left: 10px;
+}
+
+.subContainerRow3 {
+    display: flex;
+    height: 70px;
+    padding-left: 10px;
+}
+
+.nameEmailName {
+    width: 50%;
+}
+
+.nameEmailEmail {
+    width: 50%;
+}
+
+.subdivHeader {
+    width: 38%;
+}
+
+.buttonDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+
+    background-color: #555555;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    
+    opacity: 0.9;
+}
+
+.button:hover {
+    opacity: 1;
+}
