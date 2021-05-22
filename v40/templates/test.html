@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      
+    </head>
+    <body>
+      <h1>hello</h1>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script> 
+      //$(document).ready(function(){
+        //$.ajax({
+           // type: "GET",
+           // url: "http://localhost:5050/test",
+            //data: JSON.stringify(value),
+            //dataType: 'json',
+            //success: function(result) {
+            //  console.log("This is the returned data: " + JSON.stringify(result));
+            //},
+            //error: function(result){
+             // console.log("Here is an error " + JSON.stringify(result));
+            //}
+        //});
+      //});
+
+      //xhttp.open("GET", "http://localhost:5050/test", true);
+      //xhttp.send();
+
+      function fetchdata(){
+        
+        $.ajax({
+         url: 'http://localhost:5050/test',
+         type: 'GET',
+        success: function(response){
+          // Perform operation on the return value
+          //alert(response);
+          console.log(response);
+         }
+        });
+       }
+       
+       $(document).ready(function(){
+        setInterval(fetchdata,500);
+       });
+
+       
+      
+       //var ourRequest = new XMLHttpRequest();
+       //ourRequest.open('GET', 'https://learnwebcode.github.io/json-example/animals-1.json')
+       //ourRequest.open('GET', 'http://localhost:5050/test')
+       //ourRequest.onload = function() {
+        // console.log(ourRequest.responseText);
+         //console.log("work json" );
+       //};
+       //ourRequest.send();
+      
+      $(document).ready(function(){
+        console.log('hi from jQuery!');
+      });
+        
+    </script>
+</html>
