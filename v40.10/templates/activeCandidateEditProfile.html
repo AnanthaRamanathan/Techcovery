@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../static/css/activeCandidateEditProfile.css">
+    </head>
+    <body>
+        <div class="container">
+            <form action="http://localhost:8001/CandidateDetailsUpdate/<name>,<my_email>,<Your_Linkedin_Profile>,<My_Mobile_number>,<My_expertise_lies_in>,<My_Core_competencies>,<My_Expected_compensation>,<github>,<My_Work_Experience>,<My_Current_Employer>" method="POST">
+                <div class="header">
+                    <h1>Edit Profile</h1>
+                </div>
+                    
+              
+                <div class="csstransforms">
+
+                    <aside>
+                        <div>
+                          <h3>My Personal Details</h3>
+                         
+                          <div class="subContainerRow">
+                                <div class="nameEmailName">
+                                    <div class="subContainerRow">
+                                        <div class="subdivHeader"><h4>Name of the candidate :</h4></div>
+                                        <input type="text" style="height: 30px; margin-top: 15px" value="{{name}}" name="name">
+                                        
+                                    </div>
+                                </div>
+                                <div class="nameEmailEmail">
+                                    
+                                    <div class="subContainerRow">
+                                        <div class="subdivHeader"><h4>Email id :</h4></div>
+                                        <input type="text" style="height: 30px; margin-top: 15px" value="{{my_email}}" name="my_email">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subContainerRow">
+                                        <div class="nameEmailName">
+                                            <div class="subContainerRow">
+                                                <div class="subdivHeader"><h4>Linkedin Profile :</h4></div>
+                                                <input type="text" style="height: 30px; margin-top: 15px" value="{{Your_Linkedin_Profile}}" name="Your_Linkedin_Profile">
+                                            </div>
+                                        </div>
+                                        <div class="nameEmailEmail">
+                                            
+                                            <div class="subContainerRow">
+                                                <div class="subdivHeader"><h4>Contact :</h4></div>
+                                                <input type="text" style="height: 30px; margin-top: 15px" value="{{My_Mobile_number}}" name="My_Mobile_number">
+                                            </div>
+                                        </div>
+                            </div>
+                        
+                        </div>
+                    </aside>
+                
+                    
+                </div> 
+                <hr size="2px" color="black">
+                <div class="csstransforms">
+
+                    <aside>
+                        <div>
+                          <h3>My Expertise</h3>
+                         
+                            <div class="subContainerRow2">
+                                <div class="nameEmailName">
+                                    <div class="subContainerRow2">
+                                        <div class="subdivHeader"><h4>My Expertise :</h4></div>
+                                        <input type="text" style="height: 30px; margin-top: 15px" value="{{My_expertise_lies_in}}" name="My_expertise_lies_in">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subContainerRow2">
+                                <div class="nameEmailName">
+                                    <div class="subContainerRow2">
+                                        <div class="subdivHeader"><h4>My Core Comprtencies :</h4></div>
+                                        <input type="text" style="height: 30px; margin-top: 15px" value="{{My_Core_competencies}}" name="My_Core_competencies">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subContainerRow2">
+                                <div class="nameEmailName">
+                                    <div class="subContainerRow2">
+                                        <div class="subdivHeader"><h4>My Expected Compensation :</h4></div>
+                                        <input type="text" style="height: 30px; margin-top: 15px" value="{{My_Expected_compensation}}" name="My_Expected_compensation">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subContainerRow2">
+                                <div class="nameEmailName">
+                                    <div class="subContainerRow2">
+                                        <div class="subdivHeader"><h4>GitHub :</h4></div>
+                                        <input type="text" style="height: 30px; margin-top: 15px" value="{{github}}" name="github">
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </aside>
+                
+                    
+                </div>
+
+                <hr size="2px" color="black">
+
+
+
+                <div class="csstransforms">
+
+                    <aside>
+                        <div>
+                          <h3>Other details</h3>
+                            
+                            <div class="subContainerRow3">
+                                <div class="nameEmailName">
+                                    <div class="subContainerRow3">
+                                        <div class="subdivHeader"><h4>My Total experience :</h4></div>
+                                        <input type="text" style="height: 30px; margin-top: 15px" value="{{My_Work_Experience}}" name="My_Work_Experience">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subContainerRow3">
+                                <div class="nameEmailName">
+                                    <div class="subContainerRow3">
+                                        <div class="subdivHeader"><h4>My Current Employer :</h4></div>
+                                        <input type="text" style="height: 30px; margin-top: 15px" value="{{My_Current_Employer}}" name="My_Current_Employer">
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        
+                        </div>
+                    </aside>
+                
+                    
+                </div>
+                
+                <div class="buttonDiv">
+                    <button class="button" type="submit" onclick="UpdateMsg()"><b>Submit</b></button>
+                </div>
+
+                <div class="DivMsg" id="UpdateMsg">
+                    <p>
+                        <br>
+                        <b>
+                            Your Profile Updated Successfully
+                        </b>
+                    </p>
+                </div>
+
+            </form>
+        </div>
+    </body>
+    <script>
+        function UpdateMsg() {
+          var x = document.getElementById("UpdateMsg");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+    </script>
+</html>

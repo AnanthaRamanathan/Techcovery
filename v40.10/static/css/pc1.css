@@ -1,0 +1,57 @@
+body{
+    margin  :   2%;
+
+}
+
+.cantainer {
+    
+    background-color    :   #f1f1f1;
+    padding-left        :   2%;
+    padding-top         :   1%;
+    padding-right       :   2%;
+    padding-bottom      :   2%;
+    box-shadow  :   5px 10px 18px #888888;
+}
+
+.header h1 {
+    text-align: center;
+}
+.header, .nameEmail, .divAboutMe, .divEducation, .divLinkedinProfile, .divExpectedCompensation, .buttonDiv {
+    padding: 1%;
+}
+.nameEmail {
+    display: flex;
+}
+
+.nameEmailName {
+    width: 50%;
+}
+
+.nameEmailEmail {
+    width: 50%;
+}
+
+.subdivHeader {
+    width: 38%;
+}
+
+.buttonDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button {
+
+    background-color: #555555;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+
+}
+
+.button:hover {
+    opacity: 1;
+}

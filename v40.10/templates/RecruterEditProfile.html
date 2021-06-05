@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../static/css/RecruterEditProfile.css">
+    </head>
+    <body>
+        <div class="container">
+                <form action="http://localhost:8001/RecruiterDetailsUpdate/<Contact_Person>,<Official_EmailID>,<Slack_ID>,<Contact_Number>" method="POST">
+                    <div class="header">
+                        <h1>Edit Profile</h1>
+                    </div>
+                    
+                
+                    <div class="csstransforms">
+
+                        <aside>
+                            <div>
+                            <h3>Company Details</h3>
+                            
+                            <div class="subContainerRow">
+                                    <div class="nameEmailName">
+                                        <div class="subContainerRow">
+                                            <div class="subdivHeader"><h4>Contact Person Name :</h4></div>
+                                            <input type="text" style="height: 30px; margin-top: 15px" value="{{ContactPerson}}" name="Contact_Person">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="nameEmailEmail">
+                                        
+                                        <div class="subContainerRow">
+                                            <div class="subdivHeader"><h4>Email ID :</h4></div>
+                                            <input type="text" style="height: 30px; margin-top: 15px" value="{{OfficialEmailID}}" name="Official_EmailID">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="subContainerRow">
+                                            <div class="nameEmailName">
+                                                <div class="subContainerRow">
+                                                    <div class="subdivHeader"><h4>Slack ID :</h4></div>
+                                                    <input type="text" style="height: 30px; margin-top: 15px" value="{{SlackID}}" name="Slack_ID">
+                                                </div>
+                                            </div>
+                                            <div class="nameEmailEmail">
+                                                
+                                                <div class="subContainerRow">
+                                                    <div class="subdivHeader"><h4>Contact Number :</h4></div>
+                                                    <input type="text" style="height: 30px; margin-top: 15px" value="{{ContactNumber}}" name="Contact_Number">
+                                                </div>
+                                            </div>
+                                </div>
+                            
+                            </div>
+                        </aside>
+                
+                    
+                    </div> 
+                
+                    <div class="buttonDiv">
+                        <button class="button" type="submit" onclick="UpdateMsg()"><b>Submit</b></button>
+                    </div>
+                    <div class="DivMsg" id="UpdateMsg">
+                        <p>
+                            <br>
+                            <b>
+                                Your Profile Updated Successfully
+                            </b>
+                        </p>
+                    </div>
+                </form>
+
+        </div>
+    </body>
+
+    <script>
+        function UpdateMsg() {
+          var x = document.getElementById("UpdateMsg");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+    </script>
+
+</html>

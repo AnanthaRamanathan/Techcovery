@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../static/css/recruterSignUp.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1> Recruiter registration</h1>
+            <br>
+            <form action= "http://localhost:5010/recruterSignUpDetails/<CompanyName>,<ContactPerson>,<OfficialEmailID>,<hashEmail>,<Password>,<SlackID>,<ContactNumber>" method="POST">
+                    
+                <! --  -->
+                
+                    <! -- and -->  
+                <div class="subContainer">
+                    <div > 
+                        <label>Company Name</label>
+                        <br>
+                        <input class="CompanyName" 
+                            id="CompanyName"
+                            type="text" 
+                            placeholder="Enter Company Name" 
+                            name="CompanyName" 
+                            onblur="Callflask()"
+                        
+                        >
+                        <br>
+                        <label >Type of Company</label>
+                        <br>
+                        <select name="" id="CompanyType" >
+                            <option value="null" selected hidden>Select option</option>
+                            <option value="AI">AI</option>
+                            <option value="Edutech">Edutech</option>
+                            <option value="Fintech">Fintech</option>
+                            <option value="Internet">Internet</option>
+                        </select> 
+                        <br>
+                        <br>
+                        <label>Stage of Company</label>
+                        <br>
+                        <select name="" id="CompanyStage">
+                            <option value="null" selected hidden>Select option</option>
+                            <option value="SeriesA">Series A</option>
+                            <option value="SeriesB">Series B</option>
+                            <option value="SeriesC">Series C</option>
+                            <option value="SeriesD">Series D</option>
+                        </select> 
+                        <br>
+                        <br>
+                        <label>Contact Person</label>
+                        <br>
+                        <input 
+                            class="CompanyName"
+                            type="text" 
+                            placeholder="Enter Contact Person" 
+                            name="ContactPerson" 
+                            id="ContactPerson"
+                            value="{{ContactPerson}}"
+                            
+                        >
+                        <br>
+    
+                        <label>Official Email ID</label>
+                        <br>
+                        <input 
+                            id="OfficialEmail"
+                            class="OfficialEmailID" 
+                            type="text" 
+                            placeholder="Enter Official Email ID" 
+                            name="OfficialEmailID"
+                            value="{{OfficialEmailID}}"
+                        >
+                        <br>
+                        <input type="checkbox"  onclick="emailSlackChatbox()">
+                        <label >Same official ID as slack ID</label>
+                        <br>
+                        <br>
+
+                        <label>Slack ID</label>
+                        <br>
+                        <input 
+                            id="SlackId"
+                            class="SlackID" 
+                            type="text" 
+                            placeholder="Enter Slack ID" 
+                            name="SlackID"
+                            value="{{SlackID}}"
+                        >
+                        <br>
+
+                        <label>Password</label>
+                        <br>
+                        <input 
+                            class="Password"  
+                            type="password" 
+                            placeholder="Enter Password" 
+                            name="Password"
+                        >
+                        <br>
+    
+                        
+    
+                        <label>Contact Number</label>
+                        <br>
+                        <input 
+                            id="ContactNumber"
+                            class="ContactNumber"  
+                            type="text" 
+                            placeholder="Enter Contact Number" 
+                            name="ContactNumber" 
+                            value="{{ContactNumber}}"
+                        >
+                        <br>
+                    </div>
+                </div>
+
+                <div class="buttonDiv">
+                    <button 
+                        id="SubmitButton"
+                        type="submit"
+                        class="button"
+                        value="submit"
+                        onclick="myFunction()">
+                        
+                        Submit
+                    </button> 
+                </div>
+                <div class="DivVerifyMailMsg" id="DivVerifyMailMsg">
+                    <p>
+                        Confirm & verify the e-mail ID by clicking the link sent to your mail. 
+                        Please check in the span message too
+                    </p>
+                </div>
+                
+                
+
+            </form>
+        </div>
+
+    </body>
+    <script>
+        
+        function emailSlackChatbox(){
+
+            var email = document.getElementById("OfficialEmail").value
+            document.getElementById("SlackId").value = email;
+            
+        }
+
+    </script>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("DivVerifyMailMsg");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+    </script>
+
+    <script>
+        function Callflask() {
+
+            var CompanyName = document.getElementById("CompanyName").value;
+            var dataList = JSON.parse('{{ dataList|safe }}'); 
+            var dataList2 = JSON.parse('{{ dataList2|safe }}'); 
+
+           
+
+            for (i=0; i < dataList.length; i++){
+
+                    DataTuple = dataList[i];
+                    cName = DataTuple[0]
+
+                    if (cName == CompanyName) {
+
+                        document.getElementById("ContactPerson").value =DataTuple[1]
+                        document.getElementById("OfficialEmail").value =DataTuple[2]
+                        document.getElementById("SlackId").value =DataTuple[4]
+                        document.getElementById("ContactNumber").value =DataTuple[5]
+                    }
+                
+            }
+
+            for (i=0; i < dataList2.length; i++){
+
+                DataTuple2 = dataList2[i];
+                cName2 = DataTuple2[0]
+                
+
+                if (cName2 == CompanyName) {
+
+                    
+
+                    type = DataTuple2[2]
+                    stage = DataTuple2[1]
+                    
+                    document.getElementById("CompanyType").value = type
+                    document.getElementById("CompanyStage").value =stage
+
+                    
+                }
+            
+            }
+
+        }
+    </script>
+
+ 
+   
+</html>
